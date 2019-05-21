@@ -1,0 +1,18 @@
+<h1> Comment List </h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Comment</th>
+      <th>Comment created at (time)</th>
+    </tr>
+  </thead>
+  <tbody>
+     <% @comments.each do |comment| %>
+      <tr>
+        <td><a href="/comments/<%= comment.id %>"><%= comment.comment %></a></td>
+        <td><%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S")  %></td>
+      </tr>
+     <% end %>
+  </tbody>
+</table>
+<a class="btn btn-primary" href="/new_comment" role="button"> Add a New comment </a>

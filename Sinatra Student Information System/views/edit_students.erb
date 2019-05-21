@@ -1,0 +1,11 @@
+<h1>Edit A Student</h1>
+<form method="post" action="/edit_stu">
+  Student ID: <%= @student.student_id %><input type="hidden" value="<%= @student.student_id %>" name="id"><br>
+  Firstname:<input type="text" value="<%= @student.firstname %>" name="firstname" maxlength="40" required><br>
+  Lastname:<input type="text" value="<%= @student.lastname %>" name="lastname" maxlength="40" required><br>
+  Birthday:<input type="date" value="<%= @student.birthday.strftime("%Y-%m-%d")%>" name="birthday" required><br>
+  Address:<input type="text" value="<%= @student.address %>" name="address" maxlength="48" required><br>
+
+  <a class="btn btn-primary" href="/students" role="button"> Cancel </a>
+  <input class="btn btn-primary" type="submit" value="Confirm" role="button">
+</form>

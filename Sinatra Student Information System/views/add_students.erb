@@ -1,0 +1,10 @@
+<h1>Add A Student</h1>
+<form method="post" action="/addstu">
+  Student ID:<input type="number" value="<%= @new_id %>" name="id" maxlength="6" required><br>
+  Firstname:<input type="text" name="firstname" maxlength="40" required><br>
+  Lastname:<input type="text" name="lastname" maxlength="40" required><br>
+  Birthday:<input type="date" name="birthday" required><br>
+  Address:<input type="text" name="address" maxlength="48" required><br>
+  <a class="btn btn-primary" href="/students" role="button"> << Previous </a>
+  <input class="btn btn-primary" type="submit" value="Add" role="button">
+</form>
